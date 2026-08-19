@@ -126,7 +126,7 @@ export default function HomePage() {
     <main>
       {/* Hero Image */}
       <section className="w-full">
-        <div className="w-full px-[4rem] lg:px-[8rem] pt-[2rem]">
+        <div className="w-full px-[2rem] lg:px-[8rem] pt-[2rem]">
           <div className="w-full overflow-hidden">
             <img
               src="/project_page_03_4K.webp"
@@ -138,7 +138,7 @@ export default function HomePage() {
       </section>
 
       {/* Hero Text */}
-      <section className="w-full bg-white px-[4rem] lg:px-[8rem] py-[3rem] lg:py-[4rem]">
+      <section className="w-full bg-white px-[2rem] lg:px-[8rem] py-[3rem] lg:py-[4rem]">
         <div className="flex flex-col items-start gap-[2.5rem]">
           <h1
             style={{
@@ -158,7 +158,7 @@ export default function HomePage() {
 
       {/* Stats Strip */}
       <section
-        className="w-full px-[4rem] lg:px-[8rem] py-[4rem]"
+        className="w-full px-[2rem] lg:px-[8rem] py-[4rem]"
         style={{ backgroundColor: 'var(--color-white)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}
       >
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-[4rem] lg:gap-y-0 w-full">

@@ -64,7 +64,7 @@ a {
 
 /* ===== Utility Classes ===== */
 .section-padding {
-  padding: 6rem 4rem;
+  padding: 6rem 2rem;
 }
 
 @media (min-width: 1024px) {
