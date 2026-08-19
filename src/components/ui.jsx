@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LineButton from './LineButton';
+import SquareButton from './SquareButton';
+
+export { LineButton, SquareButton };
 
 export function CTAButton({ children, to, variant = 'dark', type, onClick, className = '' }) {
   const baseStyles = {

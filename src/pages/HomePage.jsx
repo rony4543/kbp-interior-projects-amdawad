@@ -3,12 +3,8 @@ import { SectionHeading, CTAButton, FAQSection } from '../components/ui';
 import BentoGridSection from '../components/BentoGridSection';
 import ExpertiseSection from '../components/ExpertiseSection';
 import IndustriesSection from '../components/IndustriesSection';
+import CallToAction from '../components/CallToAction';
 
-const clients = [
-  'J&K Bank', 'Torrent Pharmaceuticals', 'Lambda Pharmaceuticals',
-  'Intas Pharmaceuticals', 'Lodha', 'L&T Realty', 'Oberoi',
-  'Eastin Hotel', 'Nimaya', 'Zaveri Corporate House',
-];
 
 const homeFaqs = [
   {
@@ -194,26 +190,8 @@ export default function HomePage() {
       {/* Industries Showcase */}
       <IndustriesSection />
 
-      {/* Trust Strip */}
-      <section className="section-padding" style={{ backgroundColor: 'var(--color-white)' }}>
-        <SectionHeading title="Trusted By" align="center" />
-        <div className="flex flex-wrap justify-center gap-[3rem] lg:gap-[5rem]">
-          {clients.map((client, i) => (
-            <span
-              key={i}
-              style={{
-                fontSize: '1.3rem',
-                fontWeight: '300',
-                color: 'var(--color-text-light)',
-                letterSpacing: '0.05em',
-                textTransform: 'uppercase',
-              }}
-            >
-              {client}
-            </span>
-          ))}
-        </div>
-      </section>
+      {/* Call To Action */}
+      <CallToAction />
 
       {/* FAQ */}
       <section className="section-padding" style={{ backgroundColor: 'var(--color-bg-grey)' }}>
@@ -221,40 +199,6 @@ export default function HomePage() {
         <div className="max-w-[80rem]">
           <FAQSection items={homeFaqs} />
         </div>
-      </section>
-
-      {/* Final CTA */}
-      <section
-        className="section-padding"
-        style={{
-          backgroundColor: 'var(--color-black)',
-          textAlign: 'center',
-        }}
-      >
-        <h2
-          style={{
-            fontSize: 'clamp(2.4rem, 3.5vw, 3.2rem)',
-            fontWeight: '300',
-            color: 'var(--color-white)',
-            marginBottom: '1.5rem',
-            paddingBottom: '0',
-          }}
-        >
-          Have a Space That Needs to Work Harder?
-        </h2>
-        <p
-          style={{
-            fontSize: '1.4rem',
-            fontWeight: '300',
-            color: 'rgba(255,255,255,0.6)',
-            marginBottom: '3rem',
-          }}
-        >
-          Tell us your project scope. We will respond with a scoped quote, not a generic estimate.
-        </p>
-        <CTAButton to="/contact" variant="light">
-          Request a Quote
-        </CTAButton>
       </section>
     </main>
   );
