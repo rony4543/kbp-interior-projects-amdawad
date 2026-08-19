@@ -18,7 +18,7 @@ const getSpan = (index) => {
 
 export default function BentoGridSection() {
   return (
-    <section className="w-full px-[4rem] lg:px-[8rem] py-[4rem] overflow-hidden" style={{ backgroundColor: 'var(--color-white)' }}>
+    <section className="w-full px-[2rem] lg:px-[8rem] py-[4rem] overflow-hidden" style={{ backgroundColor: 'var(--color-white)' }}>
       <div className="w-full">
         <h2
           style={{
