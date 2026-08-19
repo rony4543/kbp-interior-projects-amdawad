@@ -68,9 +68,9 @@ export default function BentoGridSection() {
             style={{
               fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)',
               fontWeight: '300',
-              color: 'var(--color-black)',
+              color: 'var(--color-brand-red)',
               marginBottom: '3rem',
-              textAlign: 'center',
+              textAlign: 'left',
               textTransform: 'uppercase',
               letterSpacing: '0.05em'
             }}
@@ -78,36 +78,45 @@ export default function BentoGridSection() {
             Clients We Work With
           </h3>
           
-          <div className="w-full overflow-hidden relative border-y border-[var(--color-border)] py-[3rem]">
+          <style>{`
+            @keyframes scrollMarquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-100%); }
+            }
+            .custom-marquee {
+              animation: scrollMarquee 40s linear infinite;
+              display: flex;
+              flex-shrink: 0;
+            }
+          `}</style>
+          <div className="w-full overflow-hidden relative border-y border-[var(--color-border)] py-[3rem] flex flex-nowrap">
             {/* Fade effect on edges */}
-            <div className="absolute inset-y-0 left-0 w-[5rem] lg:w-[15rem] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-[5rem] lg:w-[15rem] bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 left-0 w-[3rem] lg:w-[10rem] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-[3rem] lg:w-[10rem] bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
             
-            <div className="flex w-[200%] animate-marquee">
-              {/* First set of logos */}
-              <div className="flex w-1/2 justify-around items-center shrink-0 px-[2rem]">
-                {clientLogos.map((logo, index) => (
-                  <img
-                    key={`logo-1-${index}`}
-                    src={logo}
-                    alt="Client Logo"
-                    className="h-[4rem] md:h-[6rem] w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 mx-[2rem]"
-                    loading="lazy"
-                  />
-                ))}
-              </div>
-              {/* Second set of logos for seamless loop */}
-              <div className="flex w-1/2 justify-around items-center shrink-0 px-[2rem]">
-                {clientLogos.map((logo, index) => (
-                  <img
-                    key={`logo-2-${index}`}
-                    src={logo}
-                    alt="Client Logo"
-                    className="h-[4rem] md:h-[6rem] w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 mx-[2rem]"
-                    loading="lazy"
-                  />
-                ))}
-              </div>
+            {/* First set of logos */}
+            <div className="custom-marquee">
+              {clientLogos.map((logo, index) => (
+                <img
+                  key={`logo-1-${index}`}
+                  src={logo}
+                  alt="Client Logo"
+                  className="h-[3.5rem] md:h-[5rem] w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 mx-[2rem] md:mx-[3.5rem] shrink-0"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+            {/* Second set of logos for seamless loop */}
+            <div className="custom-marquee" aria-hidden="true">
+              {clientLogos.map((logo, index) => (
+                <img
+                  key={`logo-2-${index}`}
+                  src={logo}
+                  alt="Client Logo"
+                  className="h-[3.5rem] md:h-[5rem] w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 mx-[2rem] md:mx-[3.5rem] shrink-0"
+                  loading="lazy"
+                />
+              ))}
             </div>
           </div>
         </div>
