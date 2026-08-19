@@ -165,11 +165,11 @@ export default function HomePage() {
           {stats.map((stat, i) => (
             <div
               key={i}
-              className={`flex flex-col justify-center relative ${
-                i === 0 ? 'text-left pr-[2rem] lg:pr-[4rem]' :
-                i === 1 ? 'text-right lg:text-center pl-[2rem] lg:px-[4rem]' :
-                i === 2 ? 'text-left lg:text-center pr-[2rem] lg:px-[4rem]' :
-                'text-right pl-[2rem] lg:pl-[4rem]'
+              className={`flex flex-col justify-center relative text-left ${
+                i === 0 ? 'pr-[2rem] lg:pr-[4rem]' :
+                i === 1 ? 'lg:text-center pl-[2rem] lg:px-[4rem]' :
+                i === 2 ? 'lg:text-center pr-[2rem] lg:px-[4rem]' :
+                'lg:text-right pl-[2rem] lg:pl-[4rem]'
               }`}
             >
               <p

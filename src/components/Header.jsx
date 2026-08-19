@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <nav className="w-full bg-white" style={{ fontFamily: 'var(--font-primary)' }}>
-      <div className="flex items-center justify-between px-[3rem] py-[1.5rem] lg:px-[8rem] lg:py-[2rem]">
+      <div className="flex items-center justify-between px-[2rem] py-[1.5rem] lg:px-[8rem] lg:py-[2rem]">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0 flex items-center">
           <img
