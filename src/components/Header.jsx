@@ -73,22 +73,42 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Backdrop */}
+      {mobileOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={() => setMobileOpen(false)}
+        />
+      )}
+
+      {/* Mobile Sidebar */}
       <div
-        className="lg:hidden overflow-hidden transition-all duration-400 ease-in-out"
-        style={{
-          maxHeight: mobileOpen ? '50rem' : '0',
-          opacity: mobileOpen ? 1 : 0,
-        }}
+        className={`fixed top-0 left-0 h-full w-[280px] bg-white z-50 transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col ${
+          mobileOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
       >
-        <div className="flex flex-col px-[4rem] pb-[3rem] gap-[2rem]">
+        <div className="flex items-center justify-between p-[2rem] border-b border-gray-100">
+          <img
+            src="/logo.png"
+            alt="KBP Interior Projects Logo"
+            className="h-[5rem] w-auto object-contain"
+          />
+          <button
+            onClick={() => setMobileOpen(false)}
+            className="w-[4rem] h-[4rem] flex items-center justify-center text-[2.4rem] text-gray-500"
+            aria-label="Close navigation menu"
+          >
+            &times;
+          </button>
+        </div>
+        <div className="flex flex-col p-[3rem] gap-[2.5rem] flex-grow overflow-y-auto">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
               onClick={() => setMobileOpen(false)}
               style={{
-                fontSize: '1.6rem',
+                fontSize: '1.8rem',
                 fontWeight: location.pathname === link.path ? '500' : '400',
                 color: location.pathname === link.path ? 'var(--color-brand-red)' : 'var(--color-black)',
               }}
