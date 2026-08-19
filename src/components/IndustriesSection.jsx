@@ -82,7 +82,7 @@ export default function IndustriesSection() {
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1]
               }}
-              className="absolute w-[80%] md:w-[45%] lg:w-[35%] max-w-[500px] aspect-square overflow-hidden shadow-2xl cursor-pointer"
+              className="absolute w-[85%] md:w-[60%] lg:w-[50%] max-w-[800px] aspect-[4/3] md:aspect-[16/10] lg:aspect-[16/9] overflow-hidden shadow-2xl cursor-pointer"
               onClick={() => setActiveIndex(index)}
             >
               {/* Background Image */}
