@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { SectionHeading, CTAButton, FAQSection } from '../components/ui';
 import BentoGridSection from '../components/BentoGridSection';
 import ExpertiseSection from '../components/ExpertiseSection';
+import IndustriesSection from '../components/IndustriesSection';
 
 const services = [
   { title: 'Interior Design & Build', desc: 'Concept to execution, in-house architects and designers.' },
@@ -215,6 +216,9 @@ export default function HomePage() {
 
       {/* Expertise Section */}
       <ExpertiseSection />
+
+      {/* Industries Showcase */}
+      <IndustriesSection />
 
       {/* Services Grid */}
       <section className="section-padding" style={{ backgroundColor: 'var(--color-bg-grey)' }}>
