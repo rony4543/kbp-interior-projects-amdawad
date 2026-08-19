@@ -174,22 +174,23 @@ export default function HomePage() {
             >
               <p
                 style={{
-                  fontSize: 'clamp(3.2rem, 4.5vw, 5rem)',
+                  fontSize: 'clamp(2.6rem, 6vw, 5rem)',
                   fontWeight: '300',
                   color: 'var(--color-brand-red)',
-                  marginBottom: '0.5rem',
-                  lineHeight: '1.1',
+                  marginBottom: '0.8rem',
+                  lineHeight: '1.2',
                 }}
               >
                 <AnimatedNumber value={stat.number} />
               </p>
               <p
                 style={{
-                  fontSize: '1.4rem',
+                  fontSize: 'clamp(1.1rem, 3vw, 1.4rem)',
                   fontWeight: '700',
                   color: 'var(--color-black)',
                   textTransform: 'uppercase',
-                  letterSpacing: '0.1em',
+                  letterSpacing: '0.05em',
+                  lineHeight: '1.4',
                 }}
               >
                 {stat.label}
