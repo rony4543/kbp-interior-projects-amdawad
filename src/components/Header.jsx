@@ -17,13 +17,13 @@ export default function Header() {
 
   return (
     <nav className="w-full bg-white" style={{ fontFamily: 'var(--font-primary)' }}>
-      <div className="flex items-center justify-between px-[4rem] lg:px-[8rem] py-[2rem]">
+      <div className="flex items-center justify-between px-[2rem] py-[1rem] lg:px-[8rem] lg:py-[2rem]">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0">
           <img
             src="/logo.png"
             alt="KBP Interior Projects Logo"
-            className="h-[7rem] w-auto object-contain"
+            className="h-[4.5rem] lg:h-[7rem] w-auto object-contain"
           />
         </Link>
 
@@ -50,24 +50,24 @@ export default function Header() {
 
         {/* Mobile Hamburger */}
         <button
-          className="lg:hidden flex flex-col justify-center items-center gap-[5px] w-[4rem] h-[4rem]"
+          className="lg:hidden flex flex-col justify-center items-center gap-[4px] w-[3.5rem] h-[3.5rem]"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation menu"
         >
           <span
-            className="block w-[2.4rem] h-[2px] bg-black transition-all duration-300"
+            className="block w-[2rem] h-[2px] bg-black transition-all duration-300"
             style={{
-              transform: mobileOpen ? 'translateY(7px) rotate(45deg)' : 'none',
+              transform: mobileOpen ? 'translateY(6px) rotate(45deg)' : 'none',
             }}
           />
           <span
-            className="block w-[2.4rem] h-[2px] bg-black transition-all duration-300"
+            className="block w-[2rem] h-[2px] bg-black transition-all duration-300"
             style={{ opacity: mobileOpen ? 0 : 1 }}
           />
           <span
-            className="block w-[2.4rem] h-[2px] bg-black transition-all duration-300"
+            className="block w-[2rem] h-[2px] bg-black transition-all duration-300"
             style={{
-              transform: mobileOpen ? 'translateY(-7px) rotate(-45deg)' : 'none',
+              transform: mobileOpen ? 'translateY(-6px) rotate(-45deg)' : 'none',
             }}
           />
         </button>
