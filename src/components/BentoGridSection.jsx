@@ -3,6 +3,19 @@ import { SectionHeading } from './ui';
 
 const images = Array.from({ length: 6 }, (_, i) => `/bento/STOREYS_Page_${String(i + 1).padStart(2, '0')}_4K.jpg`);
 
+const clientLogos = [
+  '/clients/01_mahindra_1600-BCnEcui2.webp',
+  '/clients/02_hyundai_1600-CNCNJytX.webp',
+  '/clients/03_karcher_1600-BsDtqlfL.webp',
+  '/clients/04_torrent_pharma_1600-jRwbXnrQ.webp',
+  '/clients/05_intas_pharmaceuticals_1600-NosQ5amc.webp',
+  '/clients/06_nimaaya_womens_centre_for_health_1600-Ck78Cec5.webp',
+  '/clients/07_lambda_therapeutic_research_1600-B6JQ1qVB.webp',
+  '/clients/08_huber_and_holly_1600-DuokA837.webp',
+  '/clients/09_zaveri_realty_1600-BA1i_xW5.webp',
+  '/clients/10_hn_safal_1600-QtP0EaQ4.webp',
+];
+
 // A perfect 6-item bento grid layout to fill a 4-column grid evenly
 const getSpan = (index) => {
   const pattern = [
@@ -49,6 +62,54 @@ export default function BentoGridSection() {
               <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
             </div>
           ))}
+        </div>
+        <div className="mt-[8rem]">
+          <h3
+            style={{
+              fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)',
+              fontWeight: '300',
+              color: 'var(--color-black)',
+              marginBottom: '3rem',
+              textAlign: 'center',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em'
+            }}
+          >
+            Clients We Work With
+          </h3>
+          
+          <div className="w-full overflow-hidden relative border-y border-[var(--color-border)] py-[3rem]">
+            {/* Fade effect on edges */}
+            <div className="absolute inset-y-0 left-0 w-[5rem] lg:w-[15rem] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-[5rem] lg:w-[15rem] bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            
+            <div className="flex w-[200%] animate-marquee">
+              {/* First set of logos */}
+              <div className="flex w-1/2 justify-around items-center shrink-0 px-[2rem]">
+                {clientLogos.map((logo, index) => (
+                  <img
+                    key={`logo-1-${index}`}
+                    src={logo}
+                    alt="Client Logo"
+                    className="h-[4rem] md:h-[6rem] w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 mx-[2rem]"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+              {/* Second set of logos for seamless loop */}
+              <div className="flex w-1/2 justify-around items-center shrink-0 px-[2rem]">
+                {clientLogos.map((logo, index) => (
+                  <img
+                    key={`logo-2-${index}`}
+                    src={logo}
+                    alt="Client Logo"
+                    className="h-[4rem] md:h-[6rem] w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 mx-[2rem]"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
