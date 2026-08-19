@@ -60,7 +60,7 @@ export default function ExpertiseSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full aspect-square overflow-hidden group border border-white/10"
+              className="relative w-full aspect-[4/3] md:aspect-[16/10] lg:aspect-[16/9] overflow-hidden group border border-white/10"
             >
               {/* Background Image */}
               <img 
