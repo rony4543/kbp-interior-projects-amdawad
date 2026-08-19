@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { SectionHeading, CTAButton, FAQSection } from '../components/ui';
 import BentoGridSection from '../components/BentoGridSection';
+import ExpertiseSection from '../components/ExpertiseSection';
 
 const services = [
   { title: 'Interior Design & Build', desc: 'Concept to execution, in-house architects and designers.' },
@@ -211,6 +212,9 @@ export default function HomePage() {
 
       {/* Bento Grid Gallery */}
       <BentoGridSection />
+
+      {/* Expertise Section */}
+      <ExpertiseSection />
 
       {/* Services Grid */}
       <section className="section-padding" style={{ backgroundColor: 'var(--color-bg-grey)' }}>
