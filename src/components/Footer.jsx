@@ -12,21 +12,21 @@ export default function Footer() {
       <div className="w-full max-w-[140rem] mx-auto flex justify-start lg:justify-end">
         {/* Footer Content Block: Aligned on right side on desktop, left side on mobile, with internal left alignment */}
         <div className="flex flex-col items-start text-left">
-          {/* Bold Company Name */}
+          {/* Company Name */}
           <Link
             to="/"
             className="inline-block mb-[1rem] group"
             aria-label="KBP Interior Projects Home"
           >
             <span
-              className="block text-[2rem] lg:text-[2.4rem] font-black uppercase tracking-tight text-[var(--color-black)] group-hover:text-[var(--color-brand-red)] transition-colors duration-200"
+              className="block text-[2rem] lg:text-[2.4rem] font-light uppercase tracking-tight text-[var(--color-black)] group-hover:text-[var(--color-brand-red)] transition-colors duration-200"
               style={{
-                fontWeight: 900,
+                fontWeight: 300,
                 letterSpacing: '-0.02em',
                 lineHeight: 1.1,
               }}
             >
-              KBP INTERIOR PROJECTS
+              KBP Interior Projects
             </span>
           </Link>
 
@@ -49,19 +49,13 @@ export default function Footer() {
               to="/contact"
               className="underline hover:text-[var(--color-brand-red)] hover:no-underline transition-colors duration-200"
             >
-              Privacy center
+              Privacy Policy
             </Link>
             <Link
               to="/contact"
               className="underline hover:text-[var(--color-brand-red)] hover:no-underline transition-colors duration-200"
             >
-              Privacy policy
-            </Link>
-            <Link
-              to="/contact"
-              className="underline hover:text-[var(--color-brand-red)] hover:no-underline transition-colors duration-200"
-            >
-              Cookie policy
+              Cookies Policy
             </Link>
           </div>
 
@@ -120,13 +114,6 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Bottom Information Note */}
-          <p
-            className="text-[1.15rem] font-light text-[var(--color-text-light)] tracking-wide"
-            style={{ lineHeight: '1.6' }}
-          >
-            CPWD Licensed Composite Contractor • Turnkey Interior Solutions
-          </p>
         </div>
       </div>
     </footer>

@@ -62,129 +62,71 @@ export default function ContactPage() {
 
   return (
     <main>
-      {/* Hero */}
-      <section className="section-padding" style={{ backgroundColor: 'var(--color-bg-grey)' }}>
-        <h1
-          style={{
-            fontSize: 'clamp(2.8rem, 4vw, 4.2rem)',
-            fontWeight: '300',
-            color: 'var(--color-brand-red)',
-            lineHeight: '1.2',
-            maxWidth: '60rem',
-            marginBottom: '2rem',
-          }}
-        >
-          Let's Talk About Your Project
-        </h1>
-        <p
-          style={{
-            fontSize: '1.5rem',
-            fontWeight: '300',
-            color: 'var(--color-text-body)',
-            maxWidth: '60rem',
-            lineHeight: '1.7',
-          }}
-        >
-          Tell us the scope. We will respond with next steps, not a sales pitch.
-        </p>
-      </section>
-
-      {/* Form + Details */}
+      {/* Form */}
       <section className="section-padding" style={{ backgroundColor: 'var(--color-white)' }}>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-[6rem]">
-          {/* Form */}
-          <div className="lg:col-span-7">
-            <SectionHeading title="Request a Quote" />
-
-            {submitted ? (
-              <div style={{ padding: '4rem', backgroundColor: 'var(--color-bg-grey)', textAlign: 'center' }}>
-                <h3 style={{ fontSize: '2rem', fontWeight: '300', color: 'var(--color-brand-red)', marginBottom: '1.5rem' }}>
-                  Thank You
-                </h3>
-                <p style={{ fontSize: '1.4rem', fontWeight: '300', color: 'var(--color-text-body)' }}>
-                  We have received your inquiry and will get back to you shortly.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-[2.5rem]">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-[2.5rem]">
-                  <div>
-                    <label style={labelStyle}>Name</label>
-                    <input type="text" name="name" required value={formData.name} onChange={handleChange} style={inputStyle}
-                      onFocus={(e) => (e.target.style.borderColor = 'var(--color-black)')}
-                      onBlur={(e) => (e.target.style.borderColor = 'var(--color-border)')}
-                    />
-                  </div>
-                  <div>
-                    <label style={labelStyle}>Company</label>
-                    <input type="text" name="company" value={formData.company} onChange={handleChange} style={inputStyle}
-                      onFocus={(e) => (e.target.style.borderColor = 'var(--color-black)')}
-                      onBlur={(e) => (e.target.style.borderColor = 'var(--color-border)')}
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-[2.5rem]">
-                  <div>
-                    <label style={labelStyle}>Phone</label>
-                    <input type="tel" name="phone" required value={formData.phone} onChange={handleChange} style={inputStyle}
-                      onFocus={(e) => (e.target.style.borderColor = 'var(--color-black)')}
-                      onBlur={(e) => (e.target.style.borderColor = 'var(--color-border)')}
-                    />
-                  </div>
-                  <div>
-                    <label style={labelStyle}>Email</label>
-                    <input type="email" name="email" required value={formData.email} onChange={handleChange} style={inputStyle}
-                      onFocus={(e) => (e.target.style.borderColor = 'var(--color-black)')}
-                      onBlur={(e) => (e.target.style.borderColor = 'var(--color-border)')}
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-[2.5rem]">
-                  <div>
-                    <label style={labelStyle}>Project Type</label>
-                    <select name="projectType" required value={formData.projectType} onChange={handleChange} style={{ ...inputStyle, cursor: 'pointer' }}
-                      onFocus={(e) => (e.target.style.borderColor = 'var(--color-black)')}
-                      onBlur={(e) => (e.target.style.borderColor = 'var(--color-border)')}
-                    >
-                      <option value="">Select type</option>
-                      {projectTypes.map((t) => (
-                        <option key={t} value={t}>{t}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label style={labelStyle}>City</label>
-                    <input type="text" name="city" value={formData.city} onChange={handleChange} style={inputStyle}
-                      onFocus={(e) => (e.target.style.borderColor = 'var(--color-black)')}
-                      onBlur={(e) => (e.target.style.borderColor = 'var(--color-border)')}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label style={labelStyle}>Approx. Area (sq. ft.)</label>
-                  <input type="text" name="area" value={formData.area} onChange={handleChange} style={inputStyle}
-                    onFocus={(e) => (e.target.style.borderColor = 'var(--color-black)')}
-                    onBlur={(e) => (e.target.style.borderColor = 'var(--color-border)')}
-                  />
-                </div>
-                <div>
-                  <label style={labelStyle}>Project Details</label>
-                  <textarea name="details" rows={5} value={formData.details} onChange={handleChange}
-                    style={{ ...inputStyle, resize: 'vertical' }}
-                    onFocus={(e) => (e.target.style.borderColor = 'var(--color-black)')}
-                    onBlur={(e) => (e.target.style.borderColor = 'var(--color-border)')}
-                  />
-                </div>
-                <CTAButton type="submit">Request a Quote</CTAButton>
-              </form>
-            )}
+        <div className="mx-auto w-full max-w-[78rem]">
+          <div className="mb-[5rem]">
+            <p style={{ fontSize: '1.1rem', fontWeight: '700', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-brand-red)', marginBottom: '1.5rem' }}>
+              Professional collaboration
+            </p>
+            <h2 style={{ fontSize: 'clamp(3rem, 5vw, 5.2rem)', fontWeight: '300', color: 'var(--color-black)', lineHeight: '1.12', maxWidth: '70rem', marginBottom: '2rem' }}>
+              Let&apos;s build exceptional spaces together.
+            </h2>
+            <p style={{ fontSize: '1.5rem', fontWeight: '300', color: 'var(--color-text-light)', lineHeight: '1.7', maxWidth: '62rem' }}>
+              Partner with KBP for interior execution, custom furniture manufacturing, site coordination, and complete project delivery. Share your details, and our team will connect with you to understand your upcoming project.
+            </p>
           </div>
 
-          {/* Office Details */}
-          <div className="lg:col-span-5">
-            <SectionHeading title="Office Details" />
+          {submitted ? (
+            <div style={{ padding: '4rem', backgroundColor: 'var(--color-bg-grey)', textAlign: 'center' }}>
+              <h3 style={{ fontSize: '2.4rem', fontWeight: '300', color: 'var(--color-brand-red)', marginBottom: '1.5rem' }}>Thank You</h3>
+              <p style={{ fontSize: '1.4rem', fontWeight: '300', color: 'var(--color-text-body)' }}>We have received your inquiry and will get back to you shortly.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-[3.5rem]">
+              <div>
+                <label style={labelStyle}>01 / Full Name *</label>
+                <input type="text" name="name" required value={formData.name} onChange={handleChange} placeholder="e.g. Rahul Sharma" style={inputStyle} />
+              </div>
+              <div>
+                <label style={labelStyle}>02 / Company or Studio Name</label>
+                <input type="text" name="company" value={formData.company} onChange={handleChange} placeholder="e.g. Studio Design Works" style={inputStyle} />
+              </div>
+              <div>
+                <label style={labelStyle}>03 / Mobile Number *</label>
+                <input type="tel" name="phone" required value={formData.phone} onChange={handleChange} placeholder="+91 98765 43210" style={inputStyle} />
+              </div>
+              <div>
+                <label style={labelStyle}>04 / Email Address *</label>
+                <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="rahul@example.com" style={inputStyle} />
+              </div>
+              <div>
+                <label style={labelStyle}>05 / Project Type *</label>
+                <select name="projectType" required value={formData.projectType} onChange={handleChange} style={{ ...inputStyle, cursor: 'pointer' }}>
+                  <option value="">Select your project type</option>
+                  {projectTypes.map((t) => <option key={t} value={t}>{t}</option>)}
+                </select>
+              </div>
+              <div>
+                <label style={labelStyle}>06 / City and Approx. Area</label>
+                <input type="text" name="city" value={formData.city} onChange={handleChange} placeholder="e.g. Ahmedabad, 10,000 sq. ft." style={inputStyle} />
+              </div>
+              <div>
+                <label style={labelStyle}>07 / Tell Us About Your Requirement</label>
+                <textarea name="details" rows={4} value={formData.details} onChange={handleChange} placeholder="Briefly describe your project, required services, or partnership enquiry." style={{ ...inputStyle, resize: 'vertical' }} />
+              </div>
+              <CTAButton type="submit">Submit Enquiry</CTAButton>
+            </form>
+          )}
+        </div>
+      </section>
 
-            <div className="mb-[4rem]">
+      {/* Office Details */}
+      <section className="section-padding" style={{ backgroundColor: 'var(--color-bg-grey)' }}>
+        <div className="mx-auto w-full max-w-[78rem]">
+          <SectionHeading title="Office Details" />
+          <div className="grid grid-cols-1 gap-[4rem] md:grid-cols-2">
+            <div>
               <h4 style={{ fontSize: '1.4rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '1.5rem' }}>
                 Ahmedabad Office
               </h4>
@@ -200,7 +142,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mb-[4rem]">
+            <div>
               <h4 style={{ fontSize: '1.4rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '1.5rem' }}>
                 Factory
               </h4>
@@ -213,8 +155,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            {/* Map Embed */}
-            <div style={{ width: '100%', height: '25rem', backgroundColor: 'var(--color-bg-grey)' }}>
+            <div className="md:col-span-2" style={{ width: '100%', height: '25rem', backgroundColor: 'var(--color-white)' }}>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.5!2d72.49!3d23.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAzJzAwLjAiTiA3MsKwMjknMjQuMCJF!5e0!3m2!1sen!2sin!4v1"
                 width="100%"

@@ -116,11 +116,11 @@ export function SectionHeading({ eyebrow, title, subtitle, align = 'left', title
       )}
       <h2
         style={{
-          fontSize: 'clamp(2.4rem, 4vw, 3.6rem)',
+          fontSize: 'clamp(2.8rem, 4vw, 4.2rem)',
           fontWeight: '300',
-          color: titleColor || 'var(--color-black)',
+          color: titleColor || 'var(--color-brand-red)',
           lineHeight: '1.2',
-          paddingBottom: '0.5em',
+          paddingBottom: '0',
         }}
       >
         {title}

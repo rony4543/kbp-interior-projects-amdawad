@@ -66,13 +66,12 @@ export default function BentoGridSection() {
         <div className="mt-[8rem]">
           <h3
             style={{
-              fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)',
+              fontSize: 'clamp(2.8rem, 4vw, 4.2rem)',
               fontWeight: '300',
               color: 'var(--color-brand-red)',
-              marginBottom: '3rem',
+              marginBottom: '4rem',
               textAlign: 'left',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em'
+              lineHeight: '1.2',
             }}
           >
             Clients We Work With

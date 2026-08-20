@@ -44,13 +44,12 @@ export default function CallToAction({
 
         <h2
           style={{
-            fontSize: 'clamp(2.8rem, 4.5vw, 4.4rem)',
+            fontSize: 'clamp(2.8rem, 4vw, 4.2rem)',
             fontWeight: '300',
-            color: 'var(--color-black)',
-            lineHeight: '1.25',
+            color: 'var(--color-brand-red)',
+            lineHeight: '1.2',
             marginBottom: '3.5rem',
             paddingBottom: '0',
-            letterSpacing: '-0.01em',
           }}
         >
           {title}
